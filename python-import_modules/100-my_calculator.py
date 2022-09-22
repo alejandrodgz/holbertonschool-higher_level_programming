@@ -21,10 +21,11 @@ if __name__ == "__main__":
                                     cal.mul(int(sys.argv[1]),
                                             int(sys.argv[3]))))
     if sys.argv[2] == '/':
-        print("{} * {} = {}".format(sys.argv[1],
+        print("{} / {} = {}".format(sys.argv[1],
                                     sys.argv[3],
                                     cal.div(int(sys.argv[1]),
                                             int(sys.argv[3]))))
-    if sys.argv[2] != '+' and sys.argv[2] != '-' and sys.argv[2] != '*' and sys.argv[2] != '/':
+    if sys.argv[2] != '+' and sys.argv[2] != '-' and \
+            sys.argv[2] != '*' and sys.argv[2] != '/':
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
