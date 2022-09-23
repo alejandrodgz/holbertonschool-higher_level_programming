@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-from operator import add
-
 
 def add_tuple(tuple_a=(), tuple_b=()):
     a = len(tuple_a)
