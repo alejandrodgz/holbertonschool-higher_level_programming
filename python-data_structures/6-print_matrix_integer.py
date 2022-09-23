@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if matrix is not None:
+    a = len(matrix[0])
+    if a != 0:
         a = len(matrix)
         b = len(matrix[0])
         j = 0
-        i = 0   
+        i = 0
 
         while i < a:
             j = 0
@@ -16,5 +17,4 @@ def print_matrix_integer(matrix=[[]]):
                 j += 1
             i += 1
     else:
-        print("s")
-        return
+        print("")
