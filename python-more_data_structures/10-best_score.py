@@ -3,6 +3,7 @@ def best_score(a_dictionary):
     if a_dictionary is None:
         return None
     if len(a_dictionary) == 0:
+        return None
     best_score = 0
     save = ['nothing']
     d = {}
