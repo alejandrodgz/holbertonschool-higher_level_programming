@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def print_sorted_dictionary(a_dictionary):
     s = {}
     a = sorted(a_dictionary)
