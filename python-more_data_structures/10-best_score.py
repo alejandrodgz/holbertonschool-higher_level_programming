@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if len(a_dictionary) == 0 or a_dictionary is None:
+    if a_dictionary is None:
         return None
+    if len(a_dictionary) == 0:
     best_score = 0
     save = ['nothing']
     d = {}
