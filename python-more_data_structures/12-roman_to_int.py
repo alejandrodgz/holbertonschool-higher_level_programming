@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-from re import T
-
-
 def roman_to_int(roman_string):
     if roman_string is None:
         return 0
