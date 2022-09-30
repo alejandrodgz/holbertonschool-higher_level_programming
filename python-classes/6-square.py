@@ -4,6 +4,7 @@ Module square
 creating a class with one attribute Size
 '''
 
+
 class Square:
     ''' class with one attribute
     '''
@@ -19,7 +20,7 @@ class Square:
             raise ValueError('size must be >= 0')
         else:
             self.__size = size
-        
+
         if not isinstance(position, tuple) or len(position) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
         else:
@@ -67,14 +68,14 @@ class Square:
         else:
             c = 0
             while c < self.__position[1]:
-                print("")  
+                print("")
                 c += 1
             b = 0
             while b < self.__size:
                 a = 0
                 c = 0
                 while c < self.__position[0]:
-                    print("_", end = 0)
+                    print(" ", end="")
                     c += 1
                 while a < self.__size:
                     print("#", end="")
