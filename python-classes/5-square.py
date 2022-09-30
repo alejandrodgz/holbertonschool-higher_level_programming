@@ -44,12 +44,14 @@ class Square:
     def my_print(self):
         '''print a square of size
         equal to self.__size'''
-
-        b = 0
-        while b < self.__size:
-            a = 0
-            while a < self.__size:
-                print("#", end="")
-                a += 1
+        if self.__size == 0:
             print("")
-            b += 1
+        else:
+            b = 0
+            while b < self.__size:
+                a = 0
+                while a < self.__size:
+                    print("#", end="")
+                    a += 1
+                print("")
+                b += 1
