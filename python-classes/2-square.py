@@ -20,7 +20,3 @@ class Square:
         else:
             self.__size = size
 
-    def area(self):
-        '''this is a public method
-        to calculate area'''
-        return self.__size * self.__size

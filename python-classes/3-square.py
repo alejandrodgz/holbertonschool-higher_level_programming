@@ -19,3 +19,10 @@ class Square:
             raise ValueError('size must be >= 0')
         else:
             self.__size = size
+
+    def area(self):
+        '''this is a public method
+        to calculate area'''
+        area1 = self.__size ** 2
+        return area1
+
