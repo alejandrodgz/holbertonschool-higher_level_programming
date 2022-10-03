@@ -1,0 +1,9 @@
+# testing add_integer from module 0-add_integer
+
+first import method to testing
+>>> add_integer = __import__('0-add_integer').add_integer
+
+SUCCESS CASES:
+test int and float number:
+    >>> add_integer(1, 2)
+    3
