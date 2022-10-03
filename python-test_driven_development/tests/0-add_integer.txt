@@ -9,7 +9,7 @@ test int and float number:
     3
 
 INTEGER CASTING:
-test if 'a' and 'b' are integer or floats:
+ if a is None or (type(a) is not int and type(a) is not float):
     >>> add_integer(3, 'a')
     Traceback (most recent call last):
     TypeError: b must be an integer
