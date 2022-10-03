@@ -7,6 +7,14 @@ SUCCESS CASES:
 test int and float number:
     >>> add_integer(1, 2)
     3
+    >>> add_integer(2.6, 3.5)
+    5
+    >>> add_integer(-1, 3)
+    2
+
+test one argument:
+    >>> add_integer(1)
+    99
 
 FAIL CASES:
 integer casting:
@@ -26,3 +34,4 @@ no arguments passed:
     >>> add_integer(None, None)
     Traceback (most recent call last):
     TypeError: a must be an integer
+
