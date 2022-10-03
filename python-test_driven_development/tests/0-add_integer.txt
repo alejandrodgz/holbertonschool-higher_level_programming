@@ -19,3 +19,8 @@ INTEGER CASTING:
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+    >>> add_integer(None, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
