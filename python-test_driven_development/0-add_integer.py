@@ -10,10 +10,17 @@ def add_integer(a, b=98):
     '''return the addition of a, b an exact integer
     no string permited
     '''
-    if type(a) is None or(type(a) is not int and type(a) is not float):
+    if isinstance(
+        a,
+        None) or (
+        not isinstance(
+            a,
+            int) and not isinstance(
+                a,
+            float)):
         raise TypeError("a must be an integer")
 
-    elif type(b) is not int and type(b) is not float:
+    elif not isinstance(b, int) and not isinstance(b, float):
         raise TypeError("b must be an integer")
 
     elif a + b == float('inf') or a + b == -float('inf'):
