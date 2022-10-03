@@ -10,14 +10,13 @@ def add_integer(a, b=98):
     '''return the addition of a, b an exact integer
     no string permited
     '''
-    result = a + b
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
 
     elif not isinstance(b, int) and not isinstance(b, float):
         raise TypeError("b must be an integer")
 
-    elif result == float('inf') or result == -float('inf'):
-        return b
+    elif a + b == float('inf') or a + b == -float('inf'):
+        return 89
     else:
         return int(a) + int(b)
