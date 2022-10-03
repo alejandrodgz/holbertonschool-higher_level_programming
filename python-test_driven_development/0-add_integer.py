@@ -5,17 +5,18 @@ the example module supplies one function, add_integer().
 3
 '''
 
+
 def add_integer(a, b=98):
     '''return the addition of a, b an exact integer
-    no string permited   
+    no string permited
     '''
     result = a + b
-    if type(a) != int and type(a) != float:
+    if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
 
-    elif type(b) != int and type(b) != float:
+    elif not isinstance(b, int) and not isinstance(b, float):
         raise TypeError("b must be an integer")
-        
+
     elif result == float('inf') or result == -float('inf'):
         return b
     else:
