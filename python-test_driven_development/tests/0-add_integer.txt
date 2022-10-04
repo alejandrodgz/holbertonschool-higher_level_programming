@@ -34,16 +34,14 @@ no arguments passed:
     TypeError: a must be an integer
 
 infinite number:
-    >>> add_integer(1, float('inf'))
-    89
-
-    >>> add_integer(1, float('-inf'))
-    89
-
-    >>> add_integer(float(2**5604), 3)
+    >>> add_integer(1, float('NaN'))
     Traceback (most recent call last):
-    OverflowError: int too large to convert to float
-    
-    >>> add_integer(3, float(2**45656))
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(float('inf'))
     Traceback (most recent call last):
-    OverflowError: int too large to convert to float
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(float('-inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
