@@ -3,7 +3,6 @@
 first import method to testing
 >>> add_integer = __import__('0-add_integer').add_integer
 
-SUCCESS CASES:
 test int and float number:
     >>> add_integer(1, 2)
     3
@@ -16,7 +15,6 @@ test one argument:
     >>> add_integer(1)
     99
 
-FAIL CASES:
 integer casting:
     >>> add_integer(3, 'a')
     Traceback (most recent call last):
@@ -34,4 +32,7 @@ no arguments passed:
     >>> add_integer(None, None)
     Traceback (most recent call last):
     TypeError: a must be an integer
+
+infinite number:
+
 
