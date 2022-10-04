@@ -24,12 +24,12 @@ def matrix_divided(matrix, div):
     new_matrix = [[0 for k in range(len(matrix[0]))]
                   for l in range(len(matrix))]
     y = 0
+    error1 = "matrix must be a matrix (list of lists) of integers/floats"
     for i in matrix:
         z = 0
         for j in i:
             if not isinstance(j, int) and not isinstance(j, float):
-                raise TypeError(
-                "matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(error1)
             else:
                 new_matrix[y][z] = round(float(j / div), 2)
                 z += 1
