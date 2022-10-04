@@ -34,5 +34,8 @@ no arguments passed:
     TypeError: a must be an integer
 
 infinite number:
-
-
+    >>> add_integer(1, float('inf'))
+    89
+    >>> add_integer(1, float('-inf'))
+    89
+    
