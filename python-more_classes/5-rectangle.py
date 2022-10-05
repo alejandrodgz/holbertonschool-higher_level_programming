@@ -95,7 +95,8 @@ class Rectangle:
 
     def __del__(self):
         '''deletes a instance'''
-        return print("Bye rectangle...")
+        print("Bye rectangle...")
+
 
 my_rectangle = Rectangle(2, 4)
 print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
