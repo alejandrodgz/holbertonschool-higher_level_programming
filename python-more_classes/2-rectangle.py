@@ -70,3 +70,15 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (2 * self.__width) + (2 * self.__height)
+    
+    def __str__(self):
+        i = 0
+        while i < self.__height:
+            j = 0
+            while j < self.__width:
+                print ("#", end="")
+                j += 1
+            if i != self.__height - 1:    
+                print("")
+            i += 1
+        return ""
