@@ -18,7 +18,7 @@ def print_square(size):
     while a < size:
         b = 0
         while b < size:
-            print('#',end="")
+            print('#', end="")
             b += 1
         print("")
         a += 1

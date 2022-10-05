@@ -41,3 +41,14 @@ different type:
     ...
     TypeError: size must be an integer
 
+negative int:
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+missing arguments:
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
