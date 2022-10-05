@@ -21,5 +21,3 @@ def text_indentation(text):
                 k += 1 
     new_string = text[a:i + 1]
     print(new_string, end="")
-
-text_indentation("Holberton. School? How are you:    John")
