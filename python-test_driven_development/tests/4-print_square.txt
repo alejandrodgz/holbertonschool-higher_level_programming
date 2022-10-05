@@ -1,0 +1,43 @@
+this a test for print_square function from module 4-print_square
+---------------------------------------------------------------
+_______________________________________________________________
+
+first, import function from module:
+>>> print_square = __import__('4-print_square').print_square
+
+SUCCES CASES:
+type int argument:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+argument = 0:
+>>> print_square(0)  
+
+
+FAIL CASES:
+float number as a parameter:
+    >>> print_square(23.222)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+negative float:
+    >>> print_square(-2.2)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+float overflow:
+    >>> print_square(float(2**34356))
+    Traceback (most recent call last):
+    OverflowError: int too large to convert to float
+
+different type:
+    >>> print_square('asard')
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
