@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 ''' 
-this module creates a rectangule
-contain class rectangule
+module 0-rectangule
+contain class Rectangule
 nothing done
 '''
 
-class rectangule:
+class Rectangle:
     '''empty class rectagule
     not doing anything
     dont know what to copy'''
