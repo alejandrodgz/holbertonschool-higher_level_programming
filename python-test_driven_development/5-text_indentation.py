@@ -10,7 +10,6 @@ def text_indentation(text):
     character of the ones mentioned in
     the module description'''
 
-
     if isinstance(text, str) is False:
         raise TypeError('text must be a string')
     a = 0
