@@ -13,6 +13,13 @@ def text_indentation(text):
             new_string = text[a:i + 1]
             print(new_string)
             print("")
-            a = i + 2
+            a = i + 1
+            k = a
+            while text[k] == " ":
+                i += 1
+                a += 1
+                k += 1 
     new_string = text[a:i + 1]
     print(new_string, end="")
+
+text_indentation("Holberton. School? How are you:    John")
