@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-''' this module creates a rectangule
+''' 
+this module creates a rectangule
 contain class rectangule
-nothing done'''
+nothing done
+'''
 
 class rectangule:
     '''empty class rectagule
-    not doing anything'''
+    not doing anything
+    dont know what to copy'''
 
     pass
