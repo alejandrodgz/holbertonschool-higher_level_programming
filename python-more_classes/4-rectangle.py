@@ -6,9 +6,6 @@ nothing done
 '''
 
 
-from curses.textpad import rectangle
-
-
 class Rectangle:
     '''class Rectagule
     width must be an integer
@@ -87,3 +84,6 @@ class Rectangle:
                 print("")
             i += 1
         return ""
+
+    def __repr__(self):
+        return f"{self.__class__.__name__}({self.__width}, {self.__height})"
