@@ -5,6 +5,11 @@ when these characteres are found (. , ? :)'''
 
 
 def text_indentation(text):
+    ''' text is a string
+    where we will indent every
+    character of the ones mentioned in 
+    the module description'''
+
     if isinstance(text, str) is False:
         raise TypeError('text must be a string')
     a = 0
@@ -15,9 +20,10 @@ def text_indentation(text):
             print("")
             a = i + 1
             k = a
-            while text[k] == " ":
+            while k <= len(text) - 1 and text[k] == " ":
                 i += 1
                 a += 1
-                k += 1 
+                k += 1
+
     new_string = text[a:i + 1]
     print(new_string, end="")

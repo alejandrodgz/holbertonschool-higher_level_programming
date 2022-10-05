@@ -14,6 +14,9 @@ string argument:
     Utrum igitur tibi litteram videor an totas paginas commovere?
     <BLANKLINE>
 
+    >>> text_indentation("""Lorem ipsum dolor sit am""")
+    Lorem ipsum dolor sit am
+
 FAIL CASES:
 no arguments:
     >>> text_indentation()
@@ -26,3 +29,4 @@ different type:
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
+
