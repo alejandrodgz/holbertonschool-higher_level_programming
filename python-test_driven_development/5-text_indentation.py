@@ -7,8 +7,9 @@ when these characteres are found (. , ? :)'''
 def text_indentation(text):
     ''' text is a string
     where we will indent every
-    character of the ones mentioned in 
+    character of the ones mentioned in
     the module description'''
+
 
     if isinstance(text, str) is False:
         raise TypeError('text must be a string')
