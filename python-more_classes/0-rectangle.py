@@ -2,5 +2,7 @@
 ''' this module creates a rectangule'''
 
 class rectangule:
-    '''empty class'''
+    '''empty class rectagule
+    not doing anything'''
+
     pass
