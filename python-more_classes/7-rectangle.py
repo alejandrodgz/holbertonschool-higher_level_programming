@@ -14,7 +14,7 @@ class Rectangle:
     number_of_instances = 0
     '''number of instances created'''
 
-    print_symbol = "#"
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         if isinstance(width, int) is False:
@@ -87,7 +87,7 @@ class Rectangle:
         while i < self.__height:
             j = 0
             while j < self.__width:
-                print(Rectangle.print_symbol, end="")
+                print(self.print_symbol, end="")
                 j += 1
             if i != self.__height - 1:
                 print("")
@@ -103,3 +103,27 @@ class Rectangle:
         '''deletes a instance'''
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+my_rectangle_1 = Rectangle(8, 4)
+print(my_rectangle_1)
+print("--")
+my_rectangle_1.print_symbol = "&"
+print(my_rectangle_1)
+print("--")
+
+my_rectangle_2 = Rectangle(2, 1)
+print(my_rectangle_2)
+print("--")
+Rectangle.print_symbol = "C"
+print(my_rectangle_2)
+print("--")
+
+my_rectangle_3 = Rectangle(7, 3)
+print(my_rectangle_3)
+
+print("--")
+
+my_rectangle_3.print_symbol = ["C", "is", "fun!"]
+print(my_rectangle_3)
+
+print("--")
