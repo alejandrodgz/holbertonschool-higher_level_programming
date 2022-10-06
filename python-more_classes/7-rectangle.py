@@ -14,6 +14,8 @@ class Rectangle:
     number_of_instances = 0
     '''number of instances created'''
 
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         if isinstance(width, int) is False:
             raise TypeError('width must be an integer')
@@ -28,7 +30,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
-        
+
         Rectangle.number_of_instances += 1
 
     @property
@@ -85,7 +87,7 @@ class Rectangle:
         while i < self.__height:
             j = 0
             while j < self.__width:
-                print("#", end="")
+                print(Rectangle.print_symbol, end="")
                 j += 1
             if i != self.__height - 1:
                 print("")
