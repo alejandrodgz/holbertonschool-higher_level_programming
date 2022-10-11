@@ -4,8 +4,9 @@ returns avalaible atributtes and methods
 in a object
 """
 
+
 def lookup(obj):
-    """function with one 
+    """function with one
     parameter"""
     a = dir(obj)
-    return a    
+    return a
