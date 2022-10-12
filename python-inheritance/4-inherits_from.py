@@ -8,4 +8,4 @@ def inherits_from(obj, a_class):
     '''object to analize
     class to watch
     '''
-    return not isinstance(obj, a_class) and isinstance(obj, a_class)
+    return (type(obj) is not a_class and issubclass(obj, a_class))
