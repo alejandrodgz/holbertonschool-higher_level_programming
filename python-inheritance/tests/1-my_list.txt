@@ -21,5 +21,10 @@ cero elements:
     >>> list1.print_sorted()
     []
 
+str test:
+    >>> my_list = [1]
+    >>> list2 = MyList(my_list)
+    >>> list2.__str__
+    <method-wrapper '__str__' of MyList object at 0x7fb56ff52e50>
 
     
