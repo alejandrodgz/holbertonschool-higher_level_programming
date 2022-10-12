@@ -33,4 +33,11 @@ value int lesser than 0:
     >>> bg.integer_validator('te', -34)
     Traceback (most recent call last):
     ...
-    ValueError: te  must be greater than 0
+    ValueError: te must be greater than 0
+
+value equal to zero:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator('eric', 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: eric must be greater than 0
