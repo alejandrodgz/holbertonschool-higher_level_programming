@@ -5,15 +5,13 @@ contain class Mylist
 working
 '''
 
-class Mylist:
+class Mylist(list):
     '''list of int type that
     inherits from list
     
     methods:
     print_sorted(self)
     '''
-
-    pass
 
     def print_sorted(self):
         '''method to print every
