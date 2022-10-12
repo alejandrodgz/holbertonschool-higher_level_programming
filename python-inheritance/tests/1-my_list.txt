@@ -1,11 +1,25 @@
 #testing method in module 1-my_list
 
 first import matrix_divided from module
->>> Mylist =__import__('1-my_list').Mylist
+>>> MyList =__import__('1-my_list').MyList
 
 SUCCES CASES:
 all elements are int in a list
     >>> my_list = [1, 2, 3, 6, 5]
-    >>> list1 = Mylist(my_list)
+    >>> list1 = MyList(my_list)
     >>> list1.print_sorted()
     [1, 2, 3, 5, 6]
+
+one element:
+    >>> my_list = [1]
+    >>> list1 = MyList(my_list)
+    >>> list1.print_sorted()
+    [1]
+
+cero elements:
+    >>> list1 = MyList()
+    >>> list1.print_sorted()
+    []
+
+
+    
