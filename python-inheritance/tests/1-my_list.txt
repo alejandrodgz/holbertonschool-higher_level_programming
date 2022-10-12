@@ -28,12 +28,20 @@ negative number:
     [-2]
 
 new list:
-    >>> list1 = MyList()
-    >>> list1.append(1)
-    >>> list1 is list1.print_sorted()
-    [1]
+    >>> my_list = [1, 2, 56, 7]
+    >>> list1 = MyList(my_list)
+    >>> print(list1)
+    [1, 2, 56, 7]
+    >>> list1.print_sorted()
+    [1, 2, 7, 56]
+    >>> print(list1)
+    [1, 2, 56, 7]
+
+    is a class:
+    >>> isinstance(MyList,list)
     False
-    >>> list1 == list1.print_sorted()
-    [1]
-    False
+
+    >>> issubclass(MyList,list)
+    True
+    
 
