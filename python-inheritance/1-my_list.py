@@ -7,12 +7,11 @@ inherits from list; has public instance method to print sorted
 """
 
 class Mylist(list):
-    '''list of int type that
-    inherits from list
+    """inherits from list
     
     methods:
     print_sorted(self)
-    '''
+    """
 
     def print_sorted(self):
         '''method to print every
