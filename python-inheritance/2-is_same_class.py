@@ -8,7 +8,4 @@ def is_same_class(obj, a_class):
     '''object to analize
     class to watch
     '''
-    if isinstance(obj, a_class) and isinstance(obj, a_class) is True:
-        return True
-    else:
-        return False
+    return type(obj) == a_class
