@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """
 documentation for module my_list
-with Class Mylist
+with Class Mylist but it is not 
+working
 """
-
 
 class Mylist(list):
     """list of int type that
-    inherits from list"""
+    inherits from list
+    list: integer elements
+    """
     pass
 
     def print_sorted(self):
