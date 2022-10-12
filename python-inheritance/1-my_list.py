@@ -5,7 +5,7 @@ contain class Mylist
 working
 '''
 
-class Mylist(list):
+class Mylist:
     '''list of int type that
     inherits from list
     
