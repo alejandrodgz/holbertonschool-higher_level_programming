@@ -4,9 +4,6 @@ with class BaseGeometry
 an area method"""
 
 
-from cmath import isnan
-
-
 class BaseGeometry:
     """this is an empty class"""
 
@@ -14,14 +11,13 @@ class BaseGeometry:
         """validator of integer method
         name: name of the variable
         value: value related to name"""
-        
+
         if isinstance(value, int) is False:
             raise TypeError("{} must be an integer".format(name))
         elif value <= 0:
             raise ValueError("{}  must be greater than 0".format(name))
         else:
             self.value = value
-
 
     def area(self):
         """method not implemented"""
