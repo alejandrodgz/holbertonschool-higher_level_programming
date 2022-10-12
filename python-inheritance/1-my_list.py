@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 '''
 documentation for module 1-my_list
-Contains class MyList 
+Contains class MyList
 working
 '''
+
 
 class MyList(list):
     '''list of int type that
     inherits from list
-    
+
     methods:
     print_sorted(self)
     '''
