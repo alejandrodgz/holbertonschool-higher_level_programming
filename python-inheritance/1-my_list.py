@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-'''
-documentation for module 1-my_list
-Contains class Mylist 
-working
-'''
+"""
+Module 1-my_list+
+
+Contains class MyList
+inherits from list; has public instance method to print sorted
+"""
 
 class Mylist(list):
     '''list of int type that
