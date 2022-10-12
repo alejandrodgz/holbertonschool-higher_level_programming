@@ -27,3 +27,10 @@ negative number:
     >>> list1.print_sorted()
     [-2]
 
+new list:
+    >>> list1 = MyList()
+    >>> list1.append(1)
+    >>> list1 is list1.print_sorted()
+    [1]
+    False
+
