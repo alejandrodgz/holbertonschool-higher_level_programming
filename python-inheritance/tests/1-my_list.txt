@@ -33,4 +33,7 @@ new list:
     >>> list1 is list1.print_sorted()
     [1]
     False
+    >>> list1 == list1.print_sorted()
+    [1]
+    False
 
