@@ -8,14 +8,13 @@ inherits from list; has public instance method to print sorted
 
 class Mylist(list):
     """inherits from list
-    
+
     methods:
     print_sorted(self)
     """
 
     def print_sorted(self):
-        '''method to print every
-        element of self list sorted'''
+        """prints list of ints all sorted in ascending order"""
         a = self[:]
         new_list = sorted(a)
         print(new_list)
