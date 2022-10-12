@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
-documentation for module my_list
-contain class Mylist 
+documentation for module 1-my_list
+Contains class Mylist 
 working
 '''
 
