@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 '''
 documentation for module my_list
-with Class Mylist but it is not 
+contain Class Mylist 
 working
 '''
 
 class Mylist(list):
     '''list of int type that
     inherits from list
-    list: integer elements
+    
+    methods:
+    print_sorted(self)
     '''
 
     pass
