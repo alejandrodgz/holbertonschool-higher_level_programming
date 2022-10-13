@@ -20,3 +20,4 @@ class BaseGeometry:
 
     def area(self):
         """method not implemented"""
+    
