@@ -10,6 +10,3 @@ def read_file(filename=""):
         file_read=f.read()
         for line in file_read:
             print(line,end="")
-
-
-read_file("my_file_0.txt")
