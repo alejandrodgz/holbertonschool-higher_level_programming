@@ -1,21 +1,23 @@
 #!/usr/bin/python3
-'''this module is all about to make a 
+'''this module is all about to make a
 function that writes an Object to a text file'''
 import json
+
 
 def save_to_json_file(my_obj, filename):
     with open(filename, mode="w+", encoding="utf-8")as f:
         f.write(json.dumps(my_obj))
+
 
 filename = "my_list.json"
 my_list = [1, 2, 3]
 save_to_json_file(my_list, filename)
 
 filename = "my_dict.json"
-my_dict = { 
+my_dict = {
     'id': 12,
     'name': "John",
-    'places': [ "San Francisco", "Tokyo" ],
+    'places': ["San Francisco", "Tokyo"],
     'is_active': True,
     'info': {
         'age': 36,
@@ -26,7 +28,7 @@ save_to_json_file(my_dict, filename)
 
 try:
     filename = "my_set.json"
-    my_set = { 132, 3 }
+    my_set = {132, 3}
     save_to_json_file(my_set, filename)
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
