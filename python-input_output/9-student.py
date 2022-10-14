@@ -2,8 +2,6 @@
 """class student a method
 to jsonaize """
 
-import json
-
 
 class Student:
     """class student bro
