@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''this module is all about to make a 
+'''this module is all about to make a
 function that writes an Object to a text file'''
 import json
 
