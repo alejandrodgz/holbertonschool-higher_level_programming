@@ -16,4 +16,4 @@ class Student:
 
     def to_json(self):
         '''json method'''
-        return json.dumps(self.__dict__)
+        return self.__dict__
