@@ -2,10 +2,9 @@
 '''this module contains a class
 called base'''
 
-from base import Base as Base
+import base
 
-
-class Rectangle(Base):
+class Rectangle(base.Base):
     '''class inherited from Base
     called Rectangle that stores, ahmm..
     a rectangle'''
