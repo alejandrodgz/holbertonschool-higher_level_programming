@@ -2,12 +2,12 @@
 '''this module contains a class
 called base'''
 
-import base
+from models.base import Base
 
 '''import module is necessary'''
 
 
-class Rectangle(base.Base):
+class Rectangle(Base):
     '''class inherited from Base
     called Rectangle that stores, ahmm..
     a rectangle'''
