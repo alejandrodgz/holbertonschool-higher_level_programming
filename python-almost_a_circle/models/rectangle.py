@@ -4,6 +4,8 @@ called base'''
 
 import base
 
+'''import module is necessary'''
+
 class Rectangle(base.Base):
     '''class inherited from Base
     called Rectangle that stores, ahmm..
