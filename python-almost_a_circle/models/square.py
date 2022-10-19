@@ -24,6 +24,9 @@ class Square(Rectangle):
         super().__init__(size, size)
     
     def update(self, *args, **kwargs):
+        '''this is a method called updatee
+        and is all about updating arguments
+        '''
         
         if len(args) > 0:
             self.id = args[0]
