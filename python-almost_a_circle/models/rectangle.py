@@ -2,7 +2,7 @@
 '''this module contains a class
 called base'''
 
-from models.base import Base
+from base import Base as Base
 
 '''import module is necessary'''
 
@@ -17,10 +17,33 @@ class Rectangle(Base):
     called Rectangle that stores, ahmm..
     a rectangle'''
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        if isinstance(width, int) is False:
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = width
+
+        if isinstance(height, int) is False:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = height
+
+        if isinstance(x, int) is False:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = x
+
+        if isinstance(y, int) is False:
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = y
 
     @property
     def width(self):
@@ -34,7 +57,12 @@ class Rectangle(Base):
         '''class inherited from Base
     called Rectangle that stores, ahmm..
     a rectangle'''
-        self.__width = value
+        if isinstance(value, int) is False:
+            raise TypeError("value must be an integer")
+        if value <= 0:
+            raise ValueError("value must be > 0")
+        else:
+            self.__width = value
 
     @property
     def height(self):
@@ -48,7 +76,12 @@ class Rectangle(Base):
         '''class inherited from Base
     called Rectangle that stores, ahmm..
     a rectangle'''
-        self.__height = value
+        if isinstance(value, int) is False:
+            raise TypeError("value must be an integer")
+        if value <= 0:
+            raise ValueError("value must be > 0")
+        else:
+            self.__height = value
 
     @property
     def x(self):
@@ -58,11 +91,16 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, value):
+    def x(self, x):
         '''class inherited from Base
     called Rectangle that stores, ahmm..
     a rectangle'''
-        self.__x = value
+        if isinstance(x, int) is False:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = x
 
     @property
     def y(self):
@@ -72,8 +110,36 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, value):
+    def y(self, y):
         '''class inherited from Base
     called Rectangle that stores, ahmm..
     a rectangle'''
-        self.__y = value
+        if isinstance(y, int) is False:
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = y
+
+
+try:
+    Rectangle(10, "2")
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    r = Rectangle(10, 2)
+    r.width = -10
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    r = Rectangle(10, 2)
+    r.x = {}
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    Rectangle(10, 2, 3, -1)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
