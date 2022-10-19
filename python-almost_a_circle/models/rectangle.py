@@ -126,13 +126,17 @@ class Rectangle(Base):
 
         return self.__height * self.__width
 
-    def display(self):
+    def display(self):    
         '''git the most epical reaction
         '''
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
+        for k in range(self.__y):
             print("")
+        for l in range(self.__x):
+            print (" "end ="")
+            for i in range(self.__height):
+                for j in range(self.__width):
+                    print("#", end="")
+                print("")
 
     def __str__(self):
         '''returns everything inside'''
