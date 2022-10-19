@@ -2,7 +2,7 @@
 '''this module contains a class
 called base'''
 
-from base import Base as Base
+from models.base import Base
 
 '''import module is necessary'''
 
