@@ -131,12 +131,10 @@ class Rectangle(Base):
         '''
         for k in range(self.__y):
             print("")
-        for l in range(self.__x):
-            print (" ",end ="")
-            for i in range(self.__height):
-                for j in range(self.__width):
-                    print("#", end="")
-                print("")
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print(self.__x*" ","#", end="")
+            print("")
 
     def __str__(self):
         '''returns everything inside'''
