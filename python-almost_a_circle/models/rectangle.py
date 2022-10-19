@@ -120,8 +120,3 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = y
-
-    def area(self):
-        '''just the area of triangle'''
-        
-        return self.__height * self.__width
