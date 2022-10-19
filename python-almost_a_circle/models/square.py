@@ -24,6 +24,7 @@ class Square(Rectangle):
         super().__init__(size, size)
     
     def update(self, *args, **kwargs):
+        
         if len(args) > 0:
             self.id = args[0]
         elif kwargs is not None:
