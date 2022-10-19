@@ -22,12 +22,12 @@ class Square(Rectangle):
     @size.setter
     def size(self, size):
         super().__init__(size, size)
-    
+
     def update(self, *args, **kwargs):
         '''this is a method called updatee
         and is all about updating arguments
         '''
-        
+
         if len(args) > 0:
             self.id = args[0]
         elif kwargs is not None:
@@ -53,4 +53,4 @@ class Square(Rectangle):
         elif kwargs is not None:
             for key, item in kwargs.items():
                 if key == "y":
-                    self.x = item
+                    self.y = item
