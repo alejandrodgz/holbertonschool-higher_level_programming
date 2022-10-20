@@ -178,5 +178,5 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         '''assadass'''
-        
-        return self.__dict__
+
+        return (vars(self))
