@@ -184,6 +184,6 @@ class Rectangle(Base):
         dict1["x"] = self.__x
         dict1["id"] = self.id
         dict1["y"] = self.__y
-        dict1["w"] = self.__height
-        dict1["w"] = self.__width
+        dict1["height"] = self.__height
+        dict1["width"] = self.__width
         return dict1
