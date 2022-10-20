@@ -3,7 +3,9 @@
 called base'''
 
 import json
+import sys
 
+from holbertonschool-higher_level_programming.python-input_output.3-to_json_string import to_json_string
 
 class Base:
     '''class private atribute
@@ -28,3 +30,12 @@ class Base:
             list1 = "[]"
             return list1
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        '''save a class object'''
+        if list_objs is None:
+            list1 = []
+            return list1
+        with open((cls.__name__, ".json"), mode = "w+", encoding = "utf-8") as f:
+            f.write(to_json_string(list_objs))      
