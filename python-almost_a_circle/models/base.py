@@ -3,9 +3,6 @@
 called base'''
 
 import json
-import sys
-
-from holbertonschool-higher_level_programming.python-input_output.3-to_json_string import to_json_string
 
 class Base:
     '''class private atribute
@@ -38,4 +35,4 @@ class Base:
             list1 = []
             return list1
         with open((cls.__name__, ".json"), mode = "w+", encoding = "utf-8") as f:
-            f.write(to_json_string(list_objs))      
+            f.write(cls.to_json_string(list_objs))      
