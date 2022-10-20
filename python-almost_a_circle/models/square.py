@@ -2,7 +2,7 @@
 '''this is the class square
 that inherits from rectangle
 '''
-from models.rectangle import Rectangle
+from rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -54,3 +54,15 @@ class Square(Rectangle):
             for key, item in kwargs.items():
                 if key == "y":
                     self.y = item
+
+    def to_dictionary(self):
+        """dictonary of the attributes
+        of an instance"""
+
+        dict1 = {}
+        dict1["x"] = self.x
+        dict1["id"] = self.id
+        dict1["y"] = self.y
+        dict1["size"] = self.size
+           
+        return dict1
