@@ -2,7 +2,7 @@
 '''this is the class square
 that inherits from rectangle
 '''
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -64,5 +64,5 @@ class Square(Rectangle):
         dict1["id"] = self.id
         dict1["y"] = self.y
         dict1["size"] = self.size
-           
+
         return dict1
