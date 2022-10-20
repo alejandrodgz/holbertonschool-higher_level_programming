@@ -19,9 +19,8 @@ class Base:
         else:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """method to convert to json string"""
-        if list_dictionaries is None:
-            string = []
-            return string
+        
         return json.dumps(list_dictionaries)
