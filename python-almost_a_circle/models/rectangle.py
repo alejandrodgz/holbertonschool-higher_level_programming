@@ -2,7 +2,7 @@
 '''this module contains a class
 called base'''
 
-from models.base import Base
+from base import Base as Base
 
 '''import module is necessary'''
 
@@ -177,6 +177,26 @@ class Rectangle(Base):
                     self.__y = value
 
     def to_dictionary(self):
-        '''assadass'''
+        """dictonary of the attributes
+        of an instance"""
 
-        return (vars(self))
+        dict1 = {}
+        dict1["x"] = self.__x
+        dict1["id"] = self.id
+        dict1["y"] = self.__y
+        dict1["w"] = self.__height
+        dict1["w"] = self.__width
+        return dict1
+
+
+r1 = Rectangle(10, 2, 1, 9)
+print(r1)
+r1_dictionary = r1.to_dictionary()
+print(r1_dictionary)
+print(type(r1_dictionary))
+
+r2 = Rectangle(1, 1)
+print(r2)
+r2.update(**r1_dictionary)
+print(r2)
+print(r1 == r2)
