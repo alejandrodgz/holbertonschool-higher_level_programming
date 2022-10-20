@@ -3,6 +3,8 @@
 called base'''
 
 import json
+
+
 class Base:
     '''class private atribute
     called __nb of objects'''
