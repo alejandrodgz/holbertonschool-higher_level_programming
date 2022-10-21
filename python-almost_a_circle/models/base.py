@@ -4,6 +4,7 @@ called base'''
 
 import json
 
+
 class Base:
     '''class private atribute
     called __nb of objects'''
@@ -31,13 +32,12 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         '''save a class object'''
-        if list_objs is None:
-            list1 = []
-            return list1
+
         list1 = []
-        for i in list_objs:
-            list1.append(cls.to_dictionary(i))
-            
+        if list_objs is not None:
+            for i in list_objs:
+                list1.append(cls.to_dictionary(i))
+
         extension = cls.__name__ + ".json"
-        with open(extension, mode = "w+", encoding = "utf-8") as f:
+        with open(extension, mode="w+", encoding="utf-8") as f:
             f.write(cls.to_json_string(list1))
