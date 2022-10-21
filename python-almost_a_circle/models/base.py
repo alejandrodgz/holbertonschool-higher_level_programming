@@ -50,7 +50,7 @@ class Base:
         if json_string is None:
             return list1
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         dummy = cls(1, 1)
