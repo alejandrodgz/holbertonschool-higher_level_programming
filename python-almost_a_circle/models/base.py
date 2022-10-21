@@ -2,9 +2,10 @@
 '''this module contains a class
 called base'''
 
+from genericpath import isfile
+import os.path
 import json
-from multiprocessing import dummy
-from turtle import update, width
+from venv import create
 
 
 class Base:
@@ -59,3 +60,19 @@ class Base:
             dummy = cls(1, 1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        if os.path.isfile(filename) is False:
+            list1 = []
+            return list1
+
+        list1 = []
+        with open(filename, mode="r+", encoding="utf-8") as f:
+            string1 = f.read()
+            a = cls.from_json_string(string1)
+            for i in a:
+                list1.append(cls.create(**i))
+
+            return list1
