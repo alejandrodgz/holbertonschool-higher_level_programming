@@ -41,3 +41,10 @@ class Base:
         extension = cls.__name__ + ".json"
         with open(extension, mode="w+", encoding="utf-8") as f:
             f.write(cls.to_json_string(list1))
+
+    @staticmethod
+    def from_json_string(json_string):
+        list1 = []
+        if json_string is None:
+            return list1
+        return json.loads(json_string)
