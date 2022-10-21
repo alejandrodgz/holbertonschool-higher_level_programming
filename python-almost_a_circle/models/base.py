@@ -3,6 +3,7 @@
 called base'''
 
 import json
+from turtle import width
 
 
 class Base:
@@ -48,3 +49,14 @@ class Base:
         if json_string is None:
             return list1
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        a = cls(
+            dictionary["width"],
+            dictionary["height"],
+            dictionary["x"],
+            dictionary["y"],
+            dictionary["id"])
+        a.update = (dictionary)
+        return a
