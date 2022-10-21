@@ -187,4 +187,6 @@ class Rectangle(Base):
         dict1["height"] = self.__height
         dict1["width"] = self.__width
         return dict1
+
+    
  

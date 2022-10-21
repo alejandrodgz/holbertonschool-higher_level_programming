@@ -34,5 +34,10 @@ class Base:
         if list_objs is None:
             list1 = []
             return list1
-        with open((cls.__name__, ".json"), mode = "w+", encoding = "utf-8") as f:
-            f.write(cls.to_json_string(list_objs))      
+        list1 = []
+        for i in list_objs:
+            list1.append(cls.to_dictionary(i))
+            
+        extension = cls.__name__ + ".json"
+        with open(extension, mode = "w+", encoding = "utf-8") as f:
+            f.write(cls.to_json_string(list1))
