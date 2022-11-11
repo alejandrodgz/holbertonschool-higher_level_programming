@@ -1,3 +1,3 @@
---syntax below
---show databases
+-- Lists all databases
+-- Query databases
 SHOW databases;
