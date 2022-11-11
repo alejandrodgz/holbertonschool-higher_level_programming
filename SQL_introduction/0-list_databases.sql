@@ -1,2 +1,2 @@
-/*syntax below*/
+--syntax below
 SHOW SCHEMAS;
