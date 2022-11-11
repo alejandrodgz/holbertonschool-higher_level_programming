@@ -1,2 +1,2 @@
 --syntax below
-SHOW SCHEMAS;
+SHOW DATABASES;
