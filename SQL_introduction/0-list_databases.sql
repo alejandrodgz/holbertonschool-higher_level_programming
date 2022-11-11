@@ -1,3 +1,3 @@
 --syntax below
 --show databases
-SHOW DATABASES;
+SHOW databases;
