@@ -1,0 +1,2 @@
+-- genre id 
+-- inner join
