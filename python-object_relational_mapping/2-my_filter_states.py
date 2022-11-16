@@ -16,9 +16,11 @@ if "__main__" == __name__:
 
     cur = db.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name ='{}' ORDER BY states.id ASC;".format(sys.argv[4]))
+        "SELECT * FROM states WHERE name ='{}' \
+            ORDER BY states.id ASC;".format(sys.argv[4]))
     states = cur.fetchall()
     for i in states:
-        print(i)
+        if i[1] == sys.argv[4]:
+            print(i)
     cur.close()
     db.close()
