@@ -12,7 +12,7 @@ if "__main__" == __name__:
         port=3306,
         database=sys.argv[3],
         user=sys.argv[2],
-        password=sys.argv[1])
+        password="")
 
     cur = db.cursor()
     cur.execute(
@@ -20,7 +20,7 @@ if "__main__" == __name__:
         LEFT(`name`, 1) = UPPER('N') ORDER BY states.id ASC;")
     states = cur.fetchall()
     for i in states:
-        if i[0] =='N':
+        if i[1][0] == "N":
             print(i)
     cur.close()
     db.close()
