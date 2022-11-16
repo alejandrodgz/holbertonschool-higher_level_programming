@@ -17,7 +17,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     state_info = Session().query(State).order_by(State.id)
     for i in state_info:
-        print(i.__dict__['id'], i.__dict__['name'])
+        print(f"{i.__dict__['id']}: {i.__dict__['name']}")
     Session().close()
 
     # query python instances in database
