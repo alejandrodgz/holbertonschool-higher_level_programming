@@ -3,16 +3,21 @@
 connect with sql server
 mysql commands"""
 import MySQLdb
+import sys
 
 if "__main__" == __name__:
 
-    db = MySQLdb.connect(host='localhost', port=3306, database='hbtn_0e_0_usa', user='alejandro', password='')
+    db = MySQLdb.connect(
+        host='localhost',
+        port=3306,
+        database= sys.argv[3],
+        user='alejandro',
+        password='')
 
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id ASC;")
     states = cur.fetchall()
     for i in states:
-        print (i)
+        print(i)
     cur.close()
     db.close()
-    
