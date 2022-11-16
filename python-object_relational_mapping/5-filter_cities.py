@@ -22,8 +22,8 @@ if "__main__" == __name__:
     cities = cur.fetchall()
     sep = ""
     for i in cities:
-        print(sep, i[0], end="")
-        sep = ","
+        print(f"{sep}{i[0]}", end="")
+        sep = ", "
     print("")
     cur.close()
     db.close()
