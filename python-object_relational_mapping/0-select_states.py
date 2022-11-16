@@ -11,7 +11,7 @@ if "__main__" == __name__:
         host='localhost',
         port=3306,
         database= sys.argv[3],
-        user='alejandro',
+        user='root',
         password='')
 
     cur = db.cursor()
