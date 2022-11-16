@@ -11,11 +11,12 @@ if "__main__" == __name__:
         host='localhost',
         port=3306,
         database=sys.argv[3],
-        user='root',
-        password='')
+        user=sys.argv[2],
+        password=sys.argv[1])
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC;")
+    cur.execute(
+        "SELECT * FROM states WHERE name LIKE UPPER('N%') ORDER BY states.id ASC;")
     states = cur.fetchall()
     for i in states:
         print(i)
