@@ -17,7 +17,7 @@ if "__main__" == __name__:
     cur = db.cursor()
     cur.execute(
         "SELECT * FROM states WHERE\
-        LEFT(`name`, 1) = 'N' ORDER BY states.id ASC;")
+        LEFT(`name`, 1) = UPPER('n') ORDER BY states.id ASC;")
     states = cur.fetchall()
     for i in states:
         print(i)
