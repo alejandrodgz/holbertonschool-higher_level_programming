@@ -14,9 +14,11 @@ if "__main__" == __name__:
         user=sys.argv[2],
         password="")
 
-    print(sys.argv[4])
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name ='{}' ORDER BY states.id ASC;".format(sys.argv[4]))
+    sql_statement = "SELECT * FROM states WHERE name =%s\
+    ORDER BY states.id ASC;"
+    parameters = (sys.argv[4],)
+    cur.execute(sql_statement, parameters)
     states = cur.fetchall()
     for i in states:
         if i[1] == sys.argv[4]:
