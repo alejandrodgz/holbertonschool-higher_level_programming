@@ -17,10 +17,9 @@ if "__main__" == __name__:
     cur = db.cursor()
     cur.execute(
         "SELECT * FROM states WHERE\
-        LEFT(`name`, 1) = UPPER('N') ORDER BY states.id ASC;")
+        CAST(name AS BINARY) REGEXP BINARY '^N' ORDER BY states.id ASC;")
     states = cur.fetchall()
     for i in states:
-        if i[1][0] == "N":
-            print(i)
+        print(i)
     cur.close()
     db.close()
