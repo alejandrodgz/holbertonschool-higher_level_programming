@@ -20,6 +20,7 @@ if "__main__" == __name__:
         CAST(name AS BINARY) REGEXP BINARY '^N' ORDER BY states.id ASC;")
     states = cur.fetchall()
     for i in states:
-        print(i)
+        if i == sys.argv[4]:
+            print(i)
     cur.close()
     db.close()
