@@ -16,11 +16,10 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     state_info = Session().query(State).order_by(State.id).first()
-    for i in state_info:
-        if State.id is None:
-            print("Nothing")
-        else:
-            print(f"{i.__dict__['id']}: {i.__dict__['name']}")
+    if state_info is None:
+        print("Nothing")
+    else:
+        print(f"{state_info.id}: {state_info.name}")
     Session().close()
 
     # query python instances in database
