@@ -14,7 +14,8 @@ if "__main__" == __name__:
         password="")
 
     cur = db.cursor()
-    mysql_statement = "SELECT * FROM cities ORDER BY id ASC"
+    mysql_statement = "SELECT cities.id, cities.name, states.name \
+        FROM cities, states WHERE cities.state_id = states.id ORDER BY id ASC"
     cur.execute(mysql_statement)
     cities = cur.fetchall()
     for i in cities:
