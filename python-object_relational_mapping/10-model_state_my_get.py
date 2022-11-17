@@ -15,8 +15,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
-    state_info = Session().query(State).filter_by(name=sys.argv[5])
-    if state_info is not None:
-        print(f"{state_info.id}")
+
+    state_info = Session().query(State).filter(State.name == sys.argv[4])
+    for i in state_info:
+        print(i.id)
 
     Session().close()
