@@ -1,3 +1,4 @@
+@@ -0,0 +1,23 @@
 #!/usr/bin/python3
 """retrieving info from sqalchemy
 no idea how"""
@@ -5,7 +6,7 @@ no idea how"""
 
 from model_state import Base, State
 import sys
-from sqlalchemy import (create_engine, update)
+from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
@@ -16,7 +17,8 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     Session = Session()
-    new_upt = update(State).where(State.id==2).values(name='New Mexico')
-    Session.add(new_upt)
+    new1 = State(name="Louisiana")
+    Session.add(new1)
     Session.commit()
+    print(new1.id)
     Session.close()
