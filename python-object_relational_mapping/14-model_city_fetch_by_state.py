@@ -20,7 +20,6 @@ if "__main__" == __name__:
     state_info = Session.query(model_city.City, model_state.State)\
         .filter(model_city.City.state_id == model_state.State.id)\
         .order_by(model_city.City.id).all()
-    print(state_info)
     for i, j in state_info:
         print(f"{j.name}: ({i.id}) {i.name}")
 
