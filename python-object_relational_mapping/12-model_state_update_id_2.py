@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     Session = Session()
-    new_upt = update(State).where(State.id==2).values(name='New Mexico')
-    Session.add(new_upt)
+    usr_update = Session.query(State).filter(State.id == 2).first()
+    usr_update.name = "New Mexico"
     Session.commit()
     Session.close()
