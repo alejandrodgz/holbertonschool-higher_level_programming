@@ -9,7 +9,6 @@ function convertNum (arr) {
       array1.push(Number(i));
     }
   }
-  console.log(array1);
   return array1;
 }
 
