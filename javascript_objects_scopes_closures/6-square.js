@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-import { Rectangle } from './5-square';
-export class Square extends Rectangle {
+import { Rectangle } from './5-square.js';
+module.exports = class Square extends Rectangle {
   constructor (size) {
     super(size, size);
     this.size = size;
