@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-import { Rectangle } from "./5-square";
+import { Rectangle } from './5-square';
 export class Square extends Rectangle {
   constructor (size) {
     super(size, size);
@@ -16,4 +16,4 @@ export class Square extends Rectangle {
       this.print();
     }
   }
-};
+}
