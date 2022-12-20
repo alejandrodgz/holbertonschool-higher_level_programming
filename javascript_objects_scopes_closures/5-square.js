@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-class Rectangle {
+module.exports = class Rectangle {
   constructor (w, h) {
     if (w > 0 && h > 0) {
       this.width = w;
@@ -25,24 +25,3 @@ class Rectangle {
     this.height = this.height * 2;
   }
 }
-
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
-  charPrint (c) {
-    if (c) {
-      for (let i = 0; i < this.size; i++) {
-        console.log(`${c}`.repeat(this.size));
-      }
-    } else {
-        this.print();
-    }
-  }
-}
-
-const s1 = new Square(4);
-s1.charPrint();
-
-s1.charPrint('C');
