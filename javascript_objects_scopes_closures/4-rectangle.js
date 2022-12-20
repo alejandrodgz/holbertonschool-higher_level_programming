@@ -25,4 +25,3 @@ module.exports = class Rectangle {
     this.height = this.height * 2;
   }
 };
-
