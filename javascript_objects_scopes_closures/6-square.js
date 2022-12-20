@@ -26,7 +26,7 @@ class Rectangle {
   }
 }
 
-class Square extends Rectangle {
+module.exports = class Square extends Rectangle {
   constructor (size) {
     super(size, size);
     this.size = size;
@@ -41,9 +41,4 @@ class Square extends Rectangle {
       this.print();
     }
   }
-}
-
-const s1 = new Square(4);
-s1.charPrint();
-
-s1.charPrint('C');
+};
