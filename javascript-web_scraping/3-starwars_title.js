@@ -3,6 +3,7 @@
 const request = require('request');
 const argv = require('process').argv;
 
-request.get(argv[2]).on('response', (response) => {
-  console.log(`code: ${response.statusCode}`);
+const url = 'https://swapi-api.hbtn.io/api/films/' + String(argv[2]);
+request.get(url, (error, response, body) => {
+  console.log(JSON.parse(body).title);
 });
