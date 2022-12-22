@@ -8,5 +8,9 @@ request.get(argv[2], (error, response, body) => {
   if (error) {
     throw error;
   }
-  fs.writeFile(argv[3], body, 'utf-8');
+  fs.writeFile(argv[3], body, 'utf-8', (error) => {
+    if (error) {
+      throw error;
+    }
+  });
 });
